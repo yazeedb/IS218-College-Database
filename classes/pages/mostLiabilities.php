@@ -4,12 +4,7 @@
 	class MostLiabilities extends Page {
 		public function __construct() {
 			parent::__construct();
-			$this->backToMain();
 			$this->content .= 'Most liabilities';
-		}
-
-		public function __destruct() {
-			parent::__destruct();
-		}
-	}
+		} //end function
+	} //end class
 ?>

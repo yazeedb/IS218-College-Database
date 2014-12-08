@@ -3,9 +3,11 @@
 
 	abstract class Page {
 		public $content = '';
+		public $main = FALSE;
 
 		public function __construct() {
 			$this->content .= \classes\html\Header::makeHeader();
+			if(!$this->main) { $this->backToMain(); }
 		}
 
 		public function backToMain() {

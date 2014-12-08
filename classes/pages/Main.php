@@ -2,7 +2,7 @@
 	namespace classes\pages;
 
 	class Main extends Page {
-		public $list = array(
+		private $list = array(
 				'HighestEnrollment' => 'List colleges with highest enrollment',
 				'MostLiabilities' => 'List colleges with the most liabilities',
 				'NetAssets' => 'List colleges with most net assets',
@@ -11,12 +11,9 @@
 			);
 
 		public function __construct() {
+			$this->main = TRUE;
 			parent::__construct();
 			$this->content .= \classes\html\MakeList::makeList($this->list);
-		}
-
-		public function __destruct() {
-			parent::__destruct();
-		}
+		} //end function
 	} //end class
 ?>
