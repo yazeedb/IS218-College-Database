@@ -4,6 +4,7 @@
 	class NetAssets extends Page {
 		public function __construct() {
 			parent::__construct();
+			$this->backToMain();
 			$this->content .= 'Net Assets';
 		}
 

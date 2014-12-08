@@ -4,6 +4,7 @@
 	class HighestEnrollment extends Page {
 		public function __construct() {
 			parent::__construct();
+			$this->backToMain();
 			$this->content .= 'Highest enrollment';
 		}
 
