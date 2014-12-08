@@ -3,21 +3,20 @@
 
 	class Main extends Page {
 		public $list = array(
-				'List colleges with highest enrollment',
-				'List colleges with the most liabilities',
-				'List colleges with most net assets',
-				'List colleges with most net assets <i>per student</i>',
-				'List colleges with largest percentage increased in enrollment between 2011 and 2010'
+				'HighestEnrollment' => 'List colleges with highest enrollment',
+				'MostLiabilities' => 'List colleges with the most liabilities',
+				'NetAssets' => 'List colleges with most net assets',
+				'AssetsPerStudent' => 'List colleges with most net assets <i>per student</i>',
+				'PercentIncrease' => 'List colleges with largest percentage increased in enrollment between 2011 and 2010'
 			);
 
 		public function __construct() {
 			parent::__construct();
-			$this->content .= \classes\html\MakeList::makeList($list);
+			$this->content .= \classes\html\MakeList::makeList($this->list);
 		}
 
 		public function __destruct() {
 			parent::__destruct();
-			echo $this->content;
 		}
 	} //end class
 ?>

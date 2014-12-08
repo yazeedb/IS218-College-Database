@@ -2,13 +2,13 @@
 	namespace classes\html;
 
 	class MakeList {
-		public $listContent = '';
+		protected $listContent = '';
 
 		public static function makeList($list) {
 			$listContent .= '<ul>';
 
-			foreach($list as $listItem) {
-				$listContent .= '<li>' . $listItem . '</li>';
+			foreach($list as $key => $value) {
+				$listContent .= '<a href="?pageType=' . $key . '"><li>' . $value . '</li></a>';
 			} //end foreach
 
 			$listContent .= '</ul>';
