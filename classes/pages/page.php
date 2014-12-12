@@ -3,11 +3,19 @@
 
 	abstract class Page {
 		public $content = '';
+		public $db = '';
 		public $main = FALSE;
 
 		public function __construct() {
 			$this->content .= \classes\html\Header::makeHeader();
-			if(!$this->main) { $this->backToMain(); }
+			if(!$this->main) { 
+				$this->backToMain(); 
+				$this->dbConnect();
+			}
+		}
+
+		public function dbConnect() {
+			$this->db = new \classes\DbConnect;
 		}
 
 		public function backToMain() {
