@@ -1,10 +1,10 @@
 <?php
 	namespace classes\pages;
 
-	class NetAssets extends Page {
+	class MostLiabilities extends Page {
 		public function __construct() {
 			parent::__construct();
-			$this->content .= 'Net Assets';
+			$this->content .= 'Most liabilities';
 		} //end function
 	} //end class
 ?>

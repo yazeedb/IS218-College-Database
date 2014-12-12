@@ -1,10 +1,10 @@
 <?php
 	namespace classes\pages;
 
-	class HighestEnrollment extends Page {
+	class AssetsPerStudent extends Page {
 		public function __construct() {
 			parent::__construct();
-			$this->content .= 'Highest enrollment';
+			$this->content .= 'Assets Per Student';
 		} //end function
 	} //end class
 ?>
