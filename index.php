@@ -10,4 +10,17 @@
 	} else {
 		$page1 = new $class;
 	}
+
+/* 
+1.  Create a web page that shows the colleges that have the highest enrollment
+
+2.  Create a web page that that lists the colleges with the largest amount of total liabilities
+
+3.  Create a web page that lists the colleges with the largest amount of net assets
+
+4.  Create a web page that lists the colleges with the largest amount of net assets
+
+5.  Create a web page that lists the colleges with the largest amount of total revenues
+
+*/
 ?> 

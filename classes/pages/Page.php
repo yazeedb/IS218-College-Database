@@ -4,6 +4,7 @@
 	abstract class Page {
 		public $content = '';
 		public $db = '';
+		public $query = '';
 		public $main = FALSE;
 
 		public function __construct() {
@@ -16,6 +17,15 @@
 
 		public function dbConnect() {
 			$this->db = new \classes\DbConnect;
+		}
+
+		public function useSql($sql) {
+			$query = $this->db->db->query($sql);
+			echo '<pre>';
+				foreach($query as $row) {
+					echo $row['UNITID'] . '<br>';
+				}
+			echo '</pre>';
 		}
 
 		public function backToMain() {
