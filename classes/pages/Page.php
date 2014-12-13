@@ -2,12 +2,10 @@
 	namespace classes\pages;
 
 	abstract class Page {
-		public $content = '';
-		public $db = '';
-		public $query = '';
-		public $main = FALSE;
+		protected $content, $db, $query = '';
+		protected $main = FALSE;
 
-		public function __construct() {
+		protected function __construct() {
 			$this->content .= \classes\html\Header::makeHeader();
 			if(!$this->main) { 
 				$this->backToMain(); 
@@ -15,20 +13,20 @@
 			}
 		}
 
-		public function dbConnect() {
+		protected function dbConnect() {
 			$this->db = new \classes\DbConnect;
 		}
 
-		public function useSql($sql) {
+		protected function useSql($sql, $index) {
 			$query = $this->db->db->query($sql);
-			echo '<pre>';
-				foreach($query as $row) {
-					echo $row['UNITID'] . '<br>';
-				}
-			echo '</pre>';
+			$results = $query->fetchAll();
+			
+			foreach($results as $result) {
+				echo $result[$index] . '<br>';
+			}	
 		}
 
-		public function backToMain() {
+		protected function backToMain() {
 			$this->content .= '<a href="index.php">Back To Main</a><br>';
 		}
 

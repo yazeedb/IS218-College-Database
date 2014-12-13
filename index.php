@@ -18,9 +18,7 @@
 
 3.  Create a web page that lists the colleges with the largest amount of net assets
 
-4.  Create a web page that lists the colleges with the largest amount of net assets
-
-5.  Create a web page that lists the colleges with the largest amount of total revenues
-
+4.  Create a web page that lists the colleges with the largest amount of net assets per student.
+5. Create a web page that shows the colleges with the largest percentage increase in enrollment between the years of 2011 and 2010.
 */
 ?> 
