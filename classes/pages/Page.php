@@ -21,11 +21,11 @@
 			$query = $this->db->db->query($sql);
 			$results = $query->fetchAll();
 			
-			return \classes\html\MakeList::makeResultList($results, $index);
+			return '<div class="sqlResults">' . \classes\html\MakeList::makeResultList($results, $index) . '</div>';
 		}
 
 		public function backToMain() {
-			$this->content .= '<a href="index.php">Back To Main</a><br>';
+			$this->content .= '<a href="index.php"><button class="btn btn-primary btn-block">Back To Main</button></a>';
 		}
 
 		public function __destruct() {

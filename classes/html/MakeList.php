@@ -4,10 +4,10 @@
 	class MakeList {
 
 		public static function makeHrefList($list) {
-			$listContent = '<ul>';
+			$listContent = '<ul id="options">';
 
 			foreach($list as $key => $value) {
-				$listContent .= '<a href="?pageType=' . $key . '"><li>' . $value . '</li></a>';
+				$listContent .= '<li class="option"><a href="?pageType=' . $key . '">' . $value . '</a></li>';
 			} //end foreach
 
 			$listContent .= '</ul>';
