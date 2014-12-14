@@ -13,7 +13,7 @@
 		public function __construct() {
 			$this->main = TRUE;
 			parent::__construct();
-			$this->content .= \classes\html\MakeList::makeList($this->list);
+			$this->content .= \classes\html\MakeList::makeHrefList($this->list);
 		} //end function
 	} //end class
 ?>

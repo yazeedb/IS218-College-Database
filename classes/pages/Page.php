@@ -1,11 +1,11 @@
 <?php
 	namespace classes\pages;
 
-	abstract class Page {
-		protected $content, $db, $query = '';
-		protected $main = FALSE;
+	class Page {
+		public $content, $db, $query = '';
+		public $main = FALSE;
 
-		protected function __construct() {
+		public function __construct() {
 			$this->content .= \classes\html\Header::makeHeader();
 			if(!$this->main) { 
 				$this->backToMain(); 
@@ -13,20 +13,18 @@
 			}
 		}
 
-		protected function dbConnect() {
+		public function dbConnect() {
 			$this->db = new \classes\DbConnect;
 		}
 
-		protected function useSql($sql, $index) {
+		public function useSql($sql, $index) {
 			$query = $this->db->db->query($sql);
 			$results = $query->fetchAll();
 			
-			foreach($results as $result) {
-				echo $result[$index] . '<br>';
-			}	
+			return \classes\html\MakeList::makeResultList($results, $index);
 		}
 
-		protected function backToMain() {
+		public function backToMain() {
 			$this->content .= '<a href="index.php">Back To Main</a><br>';
 		}
 
