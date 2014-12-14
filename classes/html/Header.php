@@ -12,8 +12,7 @@
 			</head>
 			<body>
 				<div class="wrapper">
-					<div class="container-fluid">
-						<h1>College Database</h1>';
+					<div class="container-fluid">';
 		}
 	}
 ?>

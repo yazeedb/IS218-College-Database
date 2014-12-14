@@ -16,13 +16,15 @@
 		} //end function
 
 		public static function makeResultList($results, $index) {
-			echo '<ul id="results">';
+			$listContent = '<ul id="results">';
 
 			foreach($results as $result) {
-				echo '<li class="result">' . $result[$index] . '</li>';
+				$listContent .= '<li class="result">' . $result[$index] . '</li>';
 			}
 
-			echo '</ul>';
+			$listContent .= '</ul>';
+
+			return $listContent;
 		} //end function
 	} //end class
 ?>

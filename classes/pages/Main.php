@@ -13,6 +13,7 @@
 		public function __construct() {
 			$this->main = TRUE;
 			parent::__construct();
+			$this->content .= '<h1>College Database</h1>';
 			$this->content .= \classes\html\MakeList::makeHrefList($this->list);
 		} //end function
 	} //end class
